@@ -41,12 +41,12 @@ async def on_message(message):
 
 # ----------------------- IMAGE COMMANDS ------------------------------
 #Shows the top viewed image on the imgur frontpage
-    elif message.content.lower().startswith('/top'):
+    elif message.content.lower().startswith('.top'):
         channel = message.channel
         await  channel.send('Right now the most viewed image on the imgur frontpage is: ' + images.topCommand().link)
 
 #Shows a random image with the tag you mentioned
-    elif message.content.lower().startswith('/img'):
+    elif message.content.lower().startswith('.img'):
         tag = message.content[5:]
         result = images.imgCommand(tag)
         if not result:
